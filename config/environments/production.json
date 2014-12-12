@@ -1,0 +1,14 @@
+{
+    "auth_pre": "Bearer ",
+    "api": "http://api.example.com/v1",
+    "role_all": "*",
+    "role_admin": "admin",
+    "role_user": "user",
+    "role_guest": "guest",
+    "ae_loginSuccess": "auth-login-success",
+    "ae_loginFailed": "auth-login-failed",
+    "ae_logoutSuccess": "auth-logout-success",
+    "ae_sessionTimeout": "auth-session-timeout",
+    "ae_notAuthenticated": "auth-not-authenticated",
+    "ae_notAuthorized": "auth-not-authorized"
+}
