@@ -1,0 +1,4 @@
+AngularSkeletonApp
+==================
+
+AngularJS skeleton application.
