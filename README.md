@@ -53,8 +53,6 @@ To deploy your app use `grunt build`.
 
 To fix this, install `grunt-karma` locally or globally and then load the task by adding `grunt.loadNpmTasks('grunt-karma');` to your Gruntfile.
 
-Learned from [Newtriks](http://newtriks.com/) 
-
 **Please help me improving this app.**
 
 
