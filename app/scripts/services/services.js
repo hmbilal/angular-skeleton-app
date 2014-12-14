@@ -29,14 +29,18 @@
                     return response;
                 },
                 responseError: function (response) {
-                    if (response.data.title && response.data.content) {
+                    if (response.data && (response.data.title && response.data.content)) {
                         $notification.error(response.data.title, response.data.content);
+                    } else {
+                        $notification.error('Error', 'The service is unavailable.');
                     }
+                    
                     $rootScope.$broadcast({
                         401: appconfig.AUTH_EVENTS.notAuthenticated,
                         403: appconfig.AUTH_EVENTS.notAuthorized,
                         419: appconfig.AUTH_EVENTS.sessionTimeout,
-                        440: appconfig.AUTH_EVENTS.sessionTimeout
+                        440: appconfig.AUTH_EVENTS.sessionTimeout,
+                        503: appconfig.ERRORS.serviceUnavailable
                     }[response.status], response);
                     return $q.reject(response);
                 }

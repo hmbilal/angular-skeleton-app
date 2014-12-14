@@ -35,19 +35,12 @@
             $scope.credentials = {
                 email: '',
                 password: '',
-                first_name: '',
-                last_name: '',
-                gender: ''
+                firstName: '',
+                lastName: '',
+                mobileNumber: '',
+                addressONe: '',
+                addressTwo: ''
             };
-
-            $scope.genderOptions = [{
-                name: "Male",
-                id: 1
-            }, {
-                name: "Female",
-                id: 0
-            }];
-
 
             $scope.register = function (credentials) {
                 RegisterService.register(credentials).then(function (res) {
@@ -60,12 +53,12 @@
             };
 
         })
-        .controller("ForgotPasswordController", function ($scope, AuthService) {
+        .controller("RecoveryController", function ($scope, AuthService) {
 
             $scope.credentials = {
                 email: ''
             };
-            $scope.recovery = function (credentials) {
+            $scope.recover = function (credentials) {
                 AuthService.recovery(credentials).then(function () {
 
                 });

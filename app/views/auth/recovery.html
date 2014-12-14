@@ -1,0 +1,17 @@
+<div class="container signup-wrapper" data-ng-controller="RecoveryController">
+    <iframe name="sink" style="display:none"></iframe>
+    <form class="form-signin" name="recoveryForm" action="sink.html" target="sink" method="post" data-ng-submit="recover(credentials)" novalidate form-autofill-fix>
+        <h2 class="form-signin-heading">Recover Account</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" 
+               data-ng-class="{ 'has-error' : recoveryForm.email.$invalid && !recoveryForm.email.$pristine }" 
+               data-ng-model="credentials.email" required autofocus>
+        <div class="checkbox">
+            <label>
+                <a data-ui-sref="login">Want to login?</a>
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Recover</button>
+    </form>
+
+</div>

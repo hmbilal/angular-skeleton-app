@@ -10,5 +10,6 @@
     "ae_logoutSuccess": "auth-logout-success",
     "ae_sessionTimeout": "auth-session-timeout",
     "ae_notAuthenticated": "auth-not-authenticated",
-    "ae_notAuthorized": "auth-not-authorized"
+    "ae_notAuthorized": "auth-not-authorized",
+    "e_serviceUnavailable": "serviceUnavailable"
 }

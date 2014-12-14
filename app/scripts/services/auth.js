@@ -6,7 +6,9 @@
     authService
         .service('$session', function (localStorageService, appconfig, $http, $urls) {
 
-            this.user = null;
+            this.user = {
+                userRole: appconfig.USER_ROLES.guest
+            };
             var thisScope = this;
 
             this.create = function (sessionId, id, user) {

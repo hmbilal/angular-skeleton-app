@@ -17,5 +17,8 @@ angular.module('bzasa.configuration', [])
         admin: '@@r_admin',
         user: '@@r_user',
         guest: '@@r_guest'
+    },
+    ERRORS: {
+        serviceUnavailable: '@@e_serviceUnavailable'
     }
   });

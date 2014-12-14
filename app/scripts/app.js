@@ -31,6 +31,7 @@
             $stateProvider
                 .state('home', {
                     url: '/',
+                    templateUrl: 'views/main.html',
                     data: {
                         authorizedRoles: [appconfig.USER_ROLES.guest, appconfig.USER_ROLES.user, appconfig.USER_ROLES.admin]
                     }
@@ -41,16 +42,22 @@
                         authorizedRoles: [appconfig.USER_ROLES.user, appconfig.USER_ROLES.admin]
                     }
                 })
-                .state('forgot', {
-                    url: '/recovery',
-                    templateUrl: 'views/login/forgot.html',
+                .state('recover', {
+                    url: '/recover',
+                    templateUrl: 'views/auth/recovery.html',
                     data: {
                         authorizedRoles: [appconfig.USER_ROLES.guest]
                     }
                 })
                 .state('signup', {
                     url: '/signup',
-                    templateUrl: 'views/login/signup.html',
+                    templateUrl: 'views/auth/signup.html',
+                    data: {
+                        authorizedRoles: [appconfig.USER_ROLES.guest]
+                    }
+                }).state('login', {
+                    url: '/login',
+                    templateUrl: 'views/auth/login.html',
                     data: {
                         authorizedRoles: [appconfig.USER_ROLES.guest]
                     }
@@ -73,7 +80,8 @@
                     if (AuthService.isAuthenticated()) {
                         // user is not allowed
                         $rootScope.$broadcast(appconfig.AUTH_EVENTS.notAuthorized);
-                    }/* else {
+                    }
+                    /* else {
                         // user is not logged in
                         $rootScope.$broadcast(appconfig.AUTH_EVENTS.notAuthenticated);
                     }*/

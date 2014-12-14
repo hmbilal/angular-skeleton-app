@@ -1,0 +1,26 @@
+<div class="container signup-wrapper" data-ng-controller="LoginController">
+    <iframe name="sink" style="display:none"></iframe>
+    <form class="form-signin" name="loginForm" action="sink.html" target="sink" method="post" data-ng-submit="loginForm.$valid && login(credentials)" novalidate form-autofill-fix>
+        <h2 class="form-signin-heading">Login</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" 
+               data-ng-class="{ 'has-error' : loginForm.email.$invalid && !loginForm.email.$pristine }" 
+               data-ng-model="credentials.email" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password"
+               data-ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }" 
+               data-ng-model="credentials.password" required>
+        <div class="checkbox">
+            <label>
+                <a data-ui-sref="recover">Forgot Password?</a>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <a data-ui-sref="signup">Don't have an account? Create one!</a>
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" data-ng-disabled="loginForm.$invalid">Login</button>
+    </form>
+
+</div>
