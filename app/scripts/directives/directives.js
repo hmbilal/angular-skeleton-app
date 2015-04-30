@@ -9,16 +9,6 @@
                 });
             };
         })
-        .directive('holderJsFix', function () {
-            return {
-                link: function (scope, element, attrs) {
-                    Holder.run({
-                        images: element[0],
-                        nocss: true
-                    });
-                }
-            };
-        })
         .directive('formAutofillFix', function ($timeout) {
             return function (scope, element, attrs) {
                 element.prop('method', 'post');

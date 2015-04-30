@@ -1,11 +1,6 @@
 (function () {
     'use strict';
-    angular.module('bzasa.filters', [])
-        .filter('rawHtml', function ($sce) {
-            return function (val) {
-                return $sce.trustAsHtml(val);
-            };
-        })
+    angular.module('bzasa.filters.formatTime', [])
         .filter('formatTime', function () {
             return function (date) {
                 var seconds = Math.floor(((new Date().getTime() / 1000) - date)),
