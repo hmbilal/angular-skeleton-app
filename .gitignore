@@ -3,11 +3,6 @@ dist
 .tmp
 .sass-cache
 bower_components
-nbproject
-api/nbproject/
-api/public/components/
-api/public/uploads/
-api/vendor/
 ._*
 .~lock.*
 .buildpath
@@ -15,9 +10,5 @@ api/vendor/
 .idea
 .project
 .settings
-api/composer.lock
-api/data/
-api/config/local*
-api/config/autoload/local.*
 test
 .git
