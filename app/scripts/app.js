@@ -12,8 +12,10 @@
       'angular-loading-bar',
       'ngRoute',
       'ui.bootstrap',
+      'ngStorage',
       'LocalStorageModule',
-      'bzasa.configuration',
+      'bzasa.config',
+      'bzasa.config.api',
       'bzasa.controllers.main',
       'bzasa.controllers.auth',
       'bzasa.controllers.profile',
@@ -23,7 +25,6 @@
       'bzasa.filters',
       'bzasa.filters.formatTime',
       'bzasa.services',
-      'bzasa.services.api',
       'bzasa.services.auth'
     ])
       .value('version', '1.0.0')
@@ -73,7 +74,7 @@
       })
       .run(function ($rootScope, $window, appconfig, AuthService) {
 
-        //AuthService.logout();
+        /*//AuthService.logout();
         $rootScope.$on('$stateChangeStart', function (event, next) {
 
           var authorizedRoles = next.data.authorizedRoles;
@@ -84,13 +85,13 @@
               // user is not allowed
               $rootScope.$broadcast(appconfig.AUTH_EVENTS.notAuthorized);
             }
-            /* else {
+            *//* else {
              // user is not logged in
              $rootScope.$broadcast(appconfig.AUTH_EVENTS.notAuthenticated);
-             }*/
+             }*//*
           }
 
-        });
+        });*/
 
         $rootScope.$on(appconfig.AUTH_EVENTS.notAuthenticated, function (event) {
           AuthService.destroy();

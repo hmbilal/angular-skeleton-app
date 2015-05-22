@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bzasa.configuration', [])
+angular.module('bzasa.config', [])
   .constant('appconfig', {
     AUTH_PRE: '@@auth_pre',
     API_URI: '@@api',

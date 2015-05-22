@@ -1,6 +1,6 @@
 {
     "auth_pre": "Bearer ",
-    "api": "http://api.example.com/v1",
+    "api": "http://laravel.local/v1",
     "r_all": "*",
     "r_admin": "admin",
     "r_user": "user",

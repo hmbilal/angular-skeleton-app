@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('bzasa.configuration', [])
+angular.module('bzasa.config', [])
   .constant('appconfig', {
     AUTH_PRE: 'Bearer ',
-    API_URI: 'http://api.example.com/v1',
+    API_URI: 'http://laravel.local/v1',
     AUTH_EVENTS: {
         loginSuccess: 'auth-login-success',
         loginFailed: 'auth-login-failed',
